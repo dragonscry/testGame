@@ -38,13 +38,11 @@ public class GameController : MonoBehaviour {
         {   
             if(balloonCount > activeBalloon)
             {
-                for (int i = 0; i < balloonCount; i++)
-                {
-                    float multiple = 10 / balloonCount;
+
+
                     Vector2 spawnPosition = new Vector2(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y);
                     Instantiate(balloon, spawnPosition, Quaternion.identity);
                     yield return new WaitForSeconds(0.3f);
-                }
 
             }
             else
