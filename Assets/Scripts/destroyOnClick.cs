@@ -49,6 +49,7 @@ public class destroyOnClick : MonoBehaviour
             if (hit.collider != null)
             {
                 Destroy(hit.collider.gameObject);
+                gameController.AddScore(scoreValue);
             }
         }
     }
